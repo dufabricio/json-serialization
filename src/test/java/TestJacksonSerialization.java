@@ -51,6 +51,15 @@ public class TestJacksonSerialization {
     }
 
     @Test
+    public void writeToCustomRootNameWrapperDeserialization() throws Exception {
+
+        String jsonString = "{\"foos\":[{\"name\":\"Chuck Norris\"},{\"name\":\"Silvester Stallone\"}]}";
+
+        ObjectMapper mapperWrapper = new CustomObjectMapperWrapper();
+        RootWrapper objectResult = mapperWrapper.readValue(jsonString,RootWrapper.class);
+        System.out.println(objectResult);
+    }
+    @Test
     public void writeToCustomJsonPropertyName() throws Exception {
 
         RootWrapperWithList rootWrapper = new RootWrapperWithList();

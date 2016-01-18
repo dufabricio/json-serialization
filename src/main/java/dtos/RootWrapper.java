@@ -1,7 +1,5 @@
 package dtos;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-
 import java.util.List;
 
 public class RootWrapper {
@@ -11,7 +9,6 @@ public class RootWrapper {
     return foos;
   }
 
-  @JsonProperty("foos")
   public void setFoos(List<Foo> foos) {
     this.foos = foos;
   }
