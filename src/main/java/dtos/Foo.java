@@ -2,7 +2,11 @@ package dtos;
 
 public class Foo {
 
+    @Apelido(valor = "Natan")
     private String name;
+
+    @FaseIdade(valor = "Adulto")
+    private Integer age;
 
     public Foo() {
     }
@@ -17,5 +21,13 @@ public class Foo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
